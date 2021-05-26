@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Food Delivery</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <!-- Navbar -->
+<nav class="navbar d-block position-sticky navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        
+        <a class="navbar-brand d-none d-sm-block me-4" href="index.html">
+            <img src="https://cartzilla.createx.studio/img/logo-dark.png" alt="logo" width="142">
+        </a>
+        <a href="index.html" class="navbar-brand d-sm-none me-2">
+            <img src="https://cartzilla.createx.studio/img/logo-icon.png" alt="logo" width="100">
+        </a>
+        <div class="navbar-toolbar d-flex align-items-center order-lg-3">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-tool d-none d-lg-flex text-secondary me-2" href="javascript:void(0)" data-bs-toggle="collapse" data-toggle="tooltip" title="Search" data-bs-target="#searchBox" role="button" aria-expanded="true" aria-controls="searchBox">
+                <div class="navbar-tool-icon-box" >
+                    <i class="navbar-tool-icon fas fa-search"></i>
+                </div>
+            </a>
+            <a class="navbar-tool ms-4 text-secondary" href="#signin-modal" data-bs-toggle="modal" data-toggle="tooltip" title="Account">
+                <div class="navbar-tool-icon-box">
+                    <i class="navbar-tool-icon far fa-user"></i>
+                </div>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse me-auto" id="navbarCollapse">
+            <!-- Search mobile -->
+            <div class="d-lg-none py-3">
+                <div class="input-group">
+                    <i class="fas fa-search position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                    <input class="form-control rounded-start" type="text" placeholder="What do you need">
+                </div>
+            </div>
+            <!-- Location dropdown -->
+            <ul class="navbar-nav navbar-mega-nav ms-lg-4 pe-lg-2 me-lg-2">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle ps-lg-0" href="" data-bs-toggle="dropdown">
+                        <i class="fas fa-map-marker-alt me-1"></i>
+                        Colchester
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="">London</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="">Chelmsford</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="">Braintree</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="">Basildon</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="">Ipswich</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Primary menu -->
+            <ul class="navbar-nav border-lg-start mb-1 mb-lg-0">
+                <li class="nav-item dropdown me-1">
+                    <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">Cuisine</a>
+                    <div class="dropdown-menu px-2 ps-0 pb-4">
+                        <div class="d-flex">
+                            <div class="mega-dropdown-column pt-4 px-3" style="width: 12rem;">
+                                <div class="widget mb-3">
+                                    <a class="d-block text-decoration-none text-dark" href="food-delivery-category.html">
+                                        <img class="d-block mx-auto mb-3" src="https://cartzilla.createx.studio/img/food-delivery/icons/burger.svg" alt="Burgers and fries" width="60">
+                                        <h6 class="fs-base text-center">Burger & Fries</h6>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-dropdown-column pt-4 px-3" style="width: 12rem;">
+                                <div class="widget mb-3">
+                                    <a class="d-block text-decoration-none text-dark" href="food-delivery-category.html">
+                                        <img class="d-block mx-auto mb-3" src="https://cartzilla.createx.studio/img/food-delivery/icons/noodles.svg" alt="Noodles" width="60">
+                                        <h6 class="fs-base text-center">Noodles</h6>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-dropdown-column pt-4 px-3" style="width: 12rem;">
+                                <div class="widget mb-3">
+                                    <a class="d-block text-decoration-none text-dark" href="food-delivery-category.html">
+                                        <img class="d-block mx-auto mb-3" src="https://cartzilla.createx.studio/img/food-delivery/icons/pizza.svg" alt="Pizza and pasta" width="60">
+                                        <h6 class="fs-base text-center">Pizza & Pasta</h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="mega-dropdown-column pt-4 px-3" style="width: 12rem;">
+                                <div class="widget mb-3">
+                                    <a class="d-block text-decoration-none text-dark" href="food-delivery-category.html">
+                                        <img class="d-block mx-auto mb-3" src="https://cartzilla.createx.studio/img/food-delivery/icons/steak.svg" alt="Grill and steaks" width="60">
+                                        <h6 class="fs-base text-center">Grill and Steaks</h6>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-dropdown-column pt-4 px-3" style="width: 12rem;">
+                                <div class="widget mb-3">
+                                    <a class="d-block text-decoration-none text-dark" href="food-delivery-category.html">
+                                        <img class="d-block mx-auto mb-3" src="https://cartzilla.createx.studio/img/food-delivery/icons/fish.svg" alt="Fish and seafood" width="60">
+                                        <h6 class="fs-base text-center">Fish & Seafood</h6>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-dropdown-column pt-4 px-3" style="width: 12rem;">
+                                <div class="widget mb-3">
+                                    <a class="d-block text-decoration-none text-dark" href="food-delivery-category.html">
+                                        <img class="d-block mx-auto mb-3" src="https://cartzilla.createx.studio/img/food-delivery/icons/healthy.svg" alt="Healthy food" width="60">
+                                        <h6 class="fs-base text-center">Healthy food</h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="mega-dropdown-column pt-4 px-3" style="width: 12rem;">
+                                <div class="widget mb-3">
+                                    <a class="d-block text-decoration-none text-dark" href="food-delivery-category.html">
+                                        <img class="d-block mx-auto mb-3" src="https://cartzilla.createx.studio/img/food-delivery/icons/cuisine.svg" alt="Haute cuisine" width="60">
+                                        <h6 class="fs-base text-center">Haute Cuisine</h6>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-dropdown-column pt-4 px-3" style="width: 12rem;">
+                                <div class="widget mb-3">
+                                    <a class="d-block text-decoration-none text-dark" href="food-delivery-category.html">
+                                        <img class="d-block mx-auto mb-3" src="https://cartzilla.createx.studio/img/food-delivery/icons/chicken.svg" alt="Chicken and snacks" width="60">
+                                        <h6 class="fs-base text-center">Chicken & Snacks</h6>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-dropdown-column pt-4 px-3" style="width: 12rem;">
+                                <div class="widget mb-3">
+                                    <a class="d-block text-decoration-none text-dark" href="food-delivery-category.html">
+                                        <img class="d-block mx-auto mb-3" src="https://cartzilla.createx.studio/img/food-delivery/icons/coffee.svg" alt="Coffee and desserts" width="60">
+                                        <h6 class="fs-base text-center">Coffee and Desserts</h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item me-1">
+                    <a class="nav-link" href="#mobile-app">Order</a>
+                </li>
+                <li class="nav-item me-1">
+                    <a class="nav-link" href="#partners">Partners</a>
+                </li>
+                <li class="nav-item me-1">
+                    <a class="nav-link" href="#reviews">Reviews</a>
+                </li>
+                <li class="nav-item me-1">
+                    <a class="nav-link" href="#career">Career</a>
+                </li>
+                <li class="nav-item me-1">
+                    <a class="nav-link" href="#footer">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Search collapse -->
+        <div class="search-box collapse" id="searchBox">
+            <div class="container py-2">
+                <div class="input-group">
+                    <i class="fas fa-search position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                    <input type="text" class="form-control rounded-start" placeholder="What do you need?">
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- End of Navbar -->
+
+<!-- Hero section -->
+<section class="section-hero bg-darker py-5">
+    <div class="container hero-container pb-5" >
+        <div class="row justify-content-center pb-5">
+            <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10 text-center">
+                <h5 class="text-light fw-light">#1 Food delivery Service since 2010</h5>
+                <div class="fs-3 fw-bold text-light mb-3 pb-4">
+                    We deliver your favorite food fresh and fast in 
+                    <div class="dropdown d-inline-block ms-1">
+                        <a class="dropdown-toggle hero-dropdown" data-bs-toggle="dropdown" href="">Colchester</a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item fs-base" href="">London</a>
+                            <a class="dropdown-item fs-base" href="">Chelmsford</a>
+                            <a class="dropdown-item fs-base" href="">Braintree</a>
+                            <a class="dropdown-item fs-base" href="">Basildon</a>
+                            <a class="dropdown-item fs-base" href="">Ipswich</a>
+                        </div>
+                    </div> 
+                </div>
+                <a class="btn btn-hero" href="#cuisine" data-scroll>What do you want to eat?</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Hero section -->
+
+<!-- Section food gallery -->
+<section class="container py-4 py-sm-5 my-lg-3" id="cuisine">
+    <h2 class="text-center pt-4 pt-sm-3">Trading food in the city</h2>
+    <p class="text-muted text-center mb-5">Choose what you want and we deliver it to you</p>
+    <div class="row">
+        <!-- single card -->
+        <div class="col-10 col-sm-6 col-md-4 mb-3 mb-md-4 mx-auto mx-sm-0">
+            <a class="card border-0 shadow-lg">
+                <img src="https://cartzilla.createx.studio/img/food-delivery/category/01.jpg" class="card-img-top img-fluid" alt="Burger meal">
+                <div class="card-body">
+                    <h3 class="card-title text-center fs-5">Burgers & Fries</h3>
+                </div>
+            </a>
+        </div>
+        <!-- End of single card -->
+        <!-- single card -->
+        <div class="col-10 col-sm-6 col-md-4 mb-3 mb-md-4 mx-auto mx-sm-0">
+            <a class="card border-0 shadow-lg">
+                <img src="https://cartzilla.createx.studio/img/food-delivery/category/02.jpg" class="card-img-top img-fluid"
+                    alt="Burger meal">
+                <div class="card-body">
+                    <h3 class="card-title text-center fs-5">Noodles</h3>
+                </div>
+            </a>
+        </div>
+        <!-- End of single card -->
+        <!-- single card -->
+        <div class="col-10 col-sm-6 col-md-4 mb-3 mb-md-4 mx-auto mx-sm-0">
+            <a class="card border-0 shadow-lg">
+                <img src="https://cartzilla.createx.studio/img/food-delivery/category/03.jpg" class="card-img-top img-fluid"
+                    alt="Burger meal">
+                <div class="card-body">
+                    <h3 class="card-title text-center fs-5">Sushi & Rolls</h3>
+                </div>
+            </a>
+        </div>
+        <!-- End of single card -->
+        <!-- single card -->
+        <div class="col-10 col-sm-6 col-md-4 mb-3 mb-md-4 mx-auto mx-sm-0">
+            <a class="card border-0 shadow-lg">
+                <img src="https://cartzilla.createx.studio/img/food-delivery/category/04.jpg" class="card-img-top img-fluid"
+                    alt="Burger meal">
+                <div class="card-body">
+                    <h3 class="card-title text-center fs-5">Pizza & Pasta</h3>
+                </div>
+            </a>
+        </div>
+        <!-- End of single card -->
+        <!-- single card -->
+        <div class="col-10 col-sm-6 col-md-4 mb-3 mb-md-4 mx-auto mx-sm-0">
+            <a class="card border-0 shadow-lg">
+                <img src="https://cartzilla.createx.studio/img/food-delivery/category/05.jpg" class="card-img-top img-fluid"
+                    alt="Burger meal">
+                <div class="card-body">
+                    <h3 class="card-title text-center fs-5">Coffee & Desserts</h3>
+                </div>
+            </a>
+        </div>
+        <!-- End of single card -->
+        <!-- single card -->
+        <div class="col-10 col-sm-6 col-md-4 mb-3 mb-md-4 mx-auto mx-sm-0">
+            <a class="card border-0 shadow-lg">
+                <img src="https://cartzilla.createx.studio/img/food-delivery/category/06.jpg" class="card-img-top img-fluid"
+                    alt="Burger meal">
+                <div class="card-body">
+                    <h3 class="card-title text-center fs-5">Healthy & Food</h3>
+                </div>
+            </a>
+        </div>
+        <!-- End of single card -->
+    </div>
+</section>
+<!-- End of Section food gallery -->
+
+<!-- Get an app section -->
+<section class="container-fluid section-mobile-app" id="mobile-app">
+  <div class="container pt-5">
+    <div class="row">
+        <div class="col-10 mx-auto mb-4 mb-sm-0 col-sm-6 offset-sm-1 d-flex flex-column justify-content-center">
+            <h2 class="text-light mb-3">Order food on the go with Cartzilla App</h2>
+            <p class="text-secondary mb-4">Pay with in app wallet, collect loyalty points, track your orders in real time and
+                much more</p>
+            <div class="row d-flex mb-sm-5 mb-md-0">
+                <div class="col-sm-8 col-lg-5 col-xl-4 mx-auto mx-lg-0 ms-lg-auto mb-2 mb-lg-0">
+                    <a href="" class="btn btn-dark d-flex btn-mobile-app">
+                        <i class="fab fa-apple text-light app-store-logo align-self-center fs-3"></i>
+                        <div class="d-flex flex-column ms-2">
+                            <span class="text-muted app-store-text">Download on the</span>
+                            <span class="text-light app-store-name">App Store</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-8 col-lg-5 col-xl-4 mx-auto mx-lg-0 me-lg-auto mb-2 mb-lg-0">
+                    <a href="" class="btn btn-dark d-flex btn-mobile-app">
+                        <i class="fab fa-google-play text-light app-store-logo align-self-center fs-3"></i>
+                        <div class="d-flex flex-column ms-2 justify-content-start">
+                            <span class="text-muted app-store-text">Download on the</span>
+                            <span class="text-light app-store-name">Google Play</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 mx-auto col-sm-5">
+            <img class="img img-fluid" src="https://cartzilla.createx.studio/img/food-delivery/phone.png"
+                alt="Mobile App screen" width="311">
+        </div>
+    </div>
+  </div>  
+</section>
+<!-- End of Get an app section -->
+
+<!-- Career section -->
+<section class="career-section container-fluid py-5" id="career">
+    <div class="container">
+        <div class="row">
+            <!-- Career card -->
+            <div class="col-10 col-md-6 mx-auto mx-md-0 mb-3 mb-md-0">
+                <div class="row border-0 rounded-3 gx-1 courier-row">
+                    <div class="col-6 d-flex align-items-center justify-content-end ps-4">
+                        <div class="text-container">
+                            <h3 class="career-text">Become a Courier</h3>
+                            <p class="career-info text-secondary">
+                                Earn competitive salary as delivery courier working flexible schedule
+                            </p>
+                            <a href="#" class="btn career-btn text-light" role="button">Start earning</a>
+                        </div>
+                    </div>    
+                    <div class="col-6">
+                        <div class="img-container">
+                            <img class="img img-fluid" src="https://cartzilla.createx.studio/img/food-delivery/courier.png" alt="Image of courier">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Career card -->
+            <!-- Career card -->
+            <div class="col-10 col-md-6 mx-auto mx-md-0 mb-3 mb-md-0">
+                <div class="row border-0 rounded-3 gx-1 chef-row">
+                    <div class="col-6 d-flex align-items-center justify-content-end ps-4">
+                        <div class="text-container">
+                            <h3 class="career-text">Become a Partner</h3>
+                            <p class="career-info text-secondary">
+                                Grow your business by reaching new customers.
+                            </p>
+                            <a href="#" class="btn career-btn text-light" role="button">Partner with us</a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="img-container">
+                            <img class="img img-fluid" src="https://cartzilla.createx.studio/img/food-delivery/chef.png"
+                                alt="Image of chef">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Career card -->
+        </div>
+    </div>
+</section>
+<!-- End of Career section -->
+
+<!-- Section popular restaurants -->
+<section class="container-fluid restaurant-section py-5" id="partners">
+    <div class="container">
+        <h2 class="text-center mb-1">Popular restaurants in your city</h2>
+        <p class="text-center text-secondary mb-4">Check best restaurants near you</p>
+        <div class="row gy-3">
+            <!-- single logo card -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="" class="d-block shadow-sm rounded-3 py-3 py-sm-4">
+                    <img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/logos/01.png" alt="McDonalds logo" class="img img-fluid d-block mx-auto" width="150">
+                </a>
+            </div>
+            <!-- single logo card -->
+            <!-- single logo card -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="" class="d-block shadow-sm rounded-3 py-3 py-sm-4">
+                    <img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/logos/02.png" alt="Dominos logo"
+                        class="img img-fluid d-block mx-auto" width="150">
+                </a>
+            </div>
+            <!-- single logo card -->
+            <!-- single logo card -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="" class="d-block shadow-sm rounded-3 py-3 py-sm-4">
+                    <img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/logos/03.png" alt="Moon logo"
+                        class="img img-fluid d-block mx-auto" width="150">
+                </a>
+            </div>
+            <!-- single logo card -->
+            <!-- single logo card -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="" class="d-block shadow-sm rounded-3 py-3 py-sm-4">
+                    <img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/logos/04.png" alt="KFC logo"
+                        class="img img-fluid d-block mx-auto" width="150">
+                </a>
+            </div>
+            <!-- single logo card -->
+            <!-- single logo card -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="" class="d-block shadow-sm rounded-3 py-3 py-sm-4">
+                    <img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/logos/05.png" alt="Olive Garden logo"
+                        class="img img-fluid d-block mx-auto" width="150">
+                </a>
+            </div>
+            <!-- single logo card -->
+            <!-- single logo card -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="" class="d-block shadow-sm rounded-3 py-3 py-sm-4">
+                    <img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/logos/06.png" alt="Logans Roadhouse logo"
+                        class="img img-fluid d-block mx-auto" width="150">
+                </a>
+            </div>
+            <!-- single logo card -->
+            <!-- single logo card -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="" class="d-block shadow-sm rounded-3 py-3 py-sm-4">
+                    <img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/logos/07.png" alt="Burger King logo"
+                        class="img img-fluid d-block mx-auto" width="150">
+                </a>
+            </div>
+            <!-- single logo card -->
+            <!-- single logo card -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="" class="d-block shadow-sm rounded-3 py-3 py-sm-4">
+                    <img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/logos/08.png" alt="Bonefish Grill logo"
+                        class="img img-fluid d-block mx-auto" width="150">
+                </a>
+            </div>
+            <!-- single logo card -->
+            <!-- single logo card -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="" class="d-block shadow-sm rounded-3 py-3 py-sm-4">
+                    <img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/logos/09.png" alt="Ruth Chris steak house logo"
+                        class="img img-fluid d-block mx-auto" width="150">
+                </a>
+            </div>
+            <!-- single logo card -->
+            <!-- single logo card -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="" class="d-block shadow-sm rounded-3 py-3 py-sm-4">
+                    <img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/logos/10.png" alt="Carrabbas logo"
+                        class="img img-fluid d-block mx-auto" width="150">
+                </a>
+            </div>
+            <!-- single logo card -->
+            <!-- single logo card -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="" class="d-block shadow-sm rounded-3 py-3 py-sm-4">
+                    <img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/logos/11.png" alt="Pizza Hut logo"
+                        class="img img-fluid d-block mx-auto" width="150">
+                </a>
+            </div>
+            <!-- single logo card -->
+            <!-- single logo card -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="" class="d-block shadow-sm rounded-3 py-3 py-sm-4">
+                    <img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/logos/12.png" alt="Asian Chao logo"
+                        class="img img-fluid d-block mx-auto" width="150">
+                </a>
+            </div>
+            <!-- single logo card -->
+        </div>
+    </div>
+</section>
+<!-- End of Section popular restaurants -->
+
+<!-- Reviews section -->
+<section class="container-fluid py-5 reviews-container" id="reviews">
+    <div class="container p-2 py-3">
+        <h2 class="text-center mb-5">Customers reviews</h2>
+        <div class="row mt-4">
+            <div class="col-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active slider-btn"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="slider-btn" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <!-- Carousel-item 1 -->
+                        <div class="carousel-item active">
+                            <div class="row px-2 flex-nowrap">
+                                <!-- Single review -->
+                                <blockquote class="col-10 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card card-body mb-3 shadow border-0 text-secondary">
+                                        <div class="star-rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum veritatis consequatur
+                                        incidunt cum aliquid delectus repudiandae ipsum itaque eveniet?
+                                    </div>
+                                    <footer class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50"
+                                            src="https://cartzilla.createx.studio/img/testimonials/03.jpg" alt="Image of Adrain Lewis">
+                                        <div class="ms-2">
+                                            <h6 class="fs-5 mb-1">Adrain Lewis</h6>
+                                            <span>Dec 13, 2020</span>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                                <!-- End of Single review -->
+                                <!-- Single review -->
+                                <blockquote class="col-10 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card card-body mb-3 shadow border-0 text-secondary">
+                                        <div class="star-rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum veritatis consequatur
+                                        incidunt cum aliquid
+                                        delectus repudiandae ipsum itaque eveniet?
+                                    </div>
+                                    <footer class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50"
+                                            src="https://cartzilla.createx.studio/img/testimonials/04.jpg" alt="Image of Laura Willson">
+                                        <div class="ms-2">
+                                            <h6 class="fs-5 mb-1">Laura Willson</h6>
+                                            <span>Feb 5, 2020</span>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                                <!-- End of Single review -->
+                                <!-- Single review -->
+                                <blockquote class="col-10 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card card-body mb-3 shadow border-0 text-secondary">
+                                        <div class="star-rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum veritatis consequatur
+                                        incidunt cum aliquid
+                                        delectus repudiandae ipsum itaque eveniet?
+                                    </div>
+                                    <footer class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50"
+                                            src="https://cartzilla.createx.studio/img/testimonials/01.jpg"
+                                            alt="Image of Mary Alice Grant">
+                                        <div class="ms-2">
+                                            <h6 class="fs-5 mb-1">Mary Alice Grant</h6>
+                                            <span>Jan 27, 2021</span>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                                <!-- End of Single review -->
+                                <!-- Single review -->
+                                <blockquote class="col-10 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card card-body mb-3 shadow border-0 text-secondary">
+                                        <div class="star-rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum veritatis consequatur
+                                        incidunt cum aliquid
+                                        delectus repudiandae ipsum itaque eveniet?
+                                    </div>
+                                    <footer class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50"
+                                            src="https://cartzilla.createx.studio/img/shop/reviews/01.jpg"
+                                            alt="Image of Rafael Marquez">
+                                        <div class="ms-2">
+                                            <h6 class="fs-5 mb-1">Rafael Marquez</h6>
+                                            <span>Dec 19, 2020</span>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                                <!-- End of Single review -->
+                            </div>
+                        </div>
+                        <!-- End of carousel-item 1 -->
+                            <!-- Carousel-item 2 -->
+                        <div class="carousel-item">
+                            <div class="row px-2 flex-nowrap">
+                                <!-- Single review -->
+                                <blockquote class="col-10 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card card-body mb-3 shadow border-0 text-secondary">
+                                        <div class="star-rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum veritatis consequatur
+                                        incidunt cum aliquid delectus repudiandae ipsum itaque eveniet?
+                                    </div>
+                                    <footer class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" src="https://cartzilla.createx.studio/img/testimonials/02.jpg"
+                                            alt="Image of Richard Devis">
+                                        <div class="ms-2">
+                                            <h6 class="fs-5 mb-1">Richard Devis</h6>
+                                            <span>Oct 21, 2020</span>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                                <!-- End of Single review -->
+                                <!-- Single review -->
+                                <blockquote class="col-10 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card card-body mb-3 shadow border-0 text-secondary">
+                                        <div class="star-rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum veritatis consequatur
+                                        incidunt cum aliquid
+                                        delectus repudiandae ipsum itaque eveniet?
+                                    </div>
+                                    <footer class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" src="https://cartzilla.createx.studio/img/shop/reviews/03.jpg"
+                                            alt="Image of Daniel Adams">
+                                        <div class="ms-2">
+                                            <h6 class="fs-5 mb-1">Daniel Adams</h6>
+                                            <span>Dec 4, 2020</span>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                                <!-- End of Single review -->
+                                <!-- Single review -->
+                                <blockquote class="col-10 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card card-body mb-3 shadow border-0 text-secondary">
+                                        <div class="star-rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum veritatis consequatur
+                                        incidunt cum aliquid
+                                        delectus repudiandae ipsum itaque eveniet?
+                                    </div>
+                                    <footer class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" src="https://cartzilla.createx.studio/img/shop/reviews/01.jpg"
+                                            alt="Image of George Doe">
+                                        <div class="ms-2">
+                                            <h6 class="fs-5 mb-1">George Doe</h6>
+                                            <span>Feb 16 27, 2021</span>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                                <!-- End of Single review -->
+                                <!-- Single review -->
+                                <blockquote class="col-10 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card card-body mb-3 shadow border-0 text-secondary">
+                                        <div class="star-rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum veritatis consequatur
+                                        incidunt cum aliquid
+                                        delectus repudiandae ipsum itaque eveniet?
+                                    </div>
+                                    <footer class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" src="https://cartzilla.createx.studio/img/testimonials/03.jpg"
+                                            alt="Image of Mason Maunt">
+                                        <div class="ms-2">
+                                            <h6 class="fs-5 mb-1">Mason Maunt</h6>
+                                            <span>Mar 17, 2021</span>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                                <!-- End of Single review -->
+                            </div>
+                        </div>
+                        <!-- End of carousel-item 2 -->      
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of reviews section -->
+
+<!-- Footer -->
+<footer class="footer bg-dark text-light py-4 w-100" id="footer">
+    <div class="container">
+        <div class="row pt-2 justify-content-center">
+            <div class="col-lg-2 col-sm-4">
+                <a href="index.html" class="d-inline-block">
+                    <img src="https://cartzilla.createx.studio/img/footer-logo-light.png" alt="Logo of Cartzilla" width="114" class="img img-fluid">
+                </a>
+            </div>
+            <div class="col-lg-2 col-sm-4">
+                <h6 class="text-light ps-3 mb-3">Join Us</h6>
+                <ul class="footer-list ps-3">
+                    <li class="list-item mb-1 text-secondary">Careers</li>
+                    <li class="list-item mb-1 text-secondary">Restaurants</li>
+                    <li class="list-item mb-1 text-secondary">Become a Courier</li>
+                    <li class="list-item mb-1 text-secondary">About</li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-sm-4">
+                <h6 class="text-light ps-3 mb-3">Let us help you</h6>
+                <ul class="footer-list ps-3">
+                    <li class="list-item mb-1 text-secondary">Help center</li>
+                    <li class="list-item mb-1 text-secondary">Support</li>
+                    <li class="list-item mb-1 text-secondary">Contacts</li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-sm-4">
+                <h6 class="text-light ps-3 mb-3">Follow us</h6>
+                <ul class="footer-list ps-3">
+                    <li class="list-item mb-1 text-secondary">Facebook</li>
+                    <li class="list-item mb-1 text-secondary">Twitter</li>
+                    <li class="list-item mb-1 text-secondary">Instagram</li>
+                </ul>
+
+            </div>
+            <div class="col-lg-4 col-sm-8 ">
+                <div class="row">
+                    <h6>Download our app</h6>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-8">
+                        <a href="" class="btn btn-dark border border-1 border-secondary d-flex btn-mobile-app-footer mb-2 mb-md-0">
+                            <i class="fab fa-apple text-light app-store-logo align-self-center fs-3"></i>
+                            <div class="d-flex flex-column ms-2">
+                                <span class="text-muted app-store-text">Download on the</span>
+                                <span class="text-light app-store-name">App Store</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-8">
+                        <a href="" class="btn btn-dark border border-1 border-secondary d-flex btn-mobile-app-footer mb-2 mb-md-0">
+                            <i class="fab fa-google-play text-light app-store-logo align-self-center fs-3"></i>
+                            <div class="d-flex flex-column ms-2 justify-content-start">
+                                <span class="text-muted app-store-text">Download on the</span>
+                                <span class="text-light app-store-name">Google Play</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="hr-light my-3 my-md-5">
+        <div class="row justify-content-lg-between justify-content-center flex-sm-column flex-lg-row">
+            <div class="col-md-5 col-sm-8 text-muted fs-6 mb-lg-1 mb-2 mx-lg-0 mx-auto ">
+                &copy; All rights reserved Radek Wilk.
+            </div>
+            <div class="col-md-7 col-sm-10 text-muted fs-6 mx-lg-0 mx-auto">
+                <ul class="footer-list footer-copyright-list text-md-end text-sm-start">
+                    <li class="d-inline-block mx-2 list-item">Privacy Polcy</li>
+                    <li class="d-inline-block mx-2 list-item">Terms and condition</li>
+                    <li class="d-inline-block mx-2 list-item">Coolies Policy</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End of footer Footer -->
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+    integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+    crossorigin="anonymous"></script>
+
+<!--Enable tooltips  -->
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+</script>
+</body>
+</html>

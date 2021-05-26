@@ -1,0 +1,137 @@
+/* Navbar */
+
+/* End of navbar */
+
+/* Hero section */
+.section-hero {
+    background-image: url(https://cartzilla.createx.studio/img/food-delivery/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+.hero-dropdown {
+    text-decoration: none;
+    color: #fe696a;
+    transition: color .3s;
+}
+
+.hero-dropdown:hover {
+    color: #fe3638;
+}
+
+.btn-hero {
+    background-color: #fe696a;
+    color: #fff;
+    transition: all .3s;
+}
+
+.btn-hero:hover {
+    background-color:#fe3638;
+    color: #fff;
+}
+
+/* End of Hero section */
+
+/* Food gallery */
+
+.card {
+    text-decoration: none;
+    color: #212529;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card img {
+    opacity: .7;
+    transition: opacity .6s;
+}
+
+.card:hover img {
+    opacity: 1;
+}
+/* End of Food gallery */
+
+/* Mobile app section */
+.section-mobile-app {
+    background-color: #fe3638;
+}
+
+.app-store-text {
+    font-size: .5rem;
+}
+
+.app-store-name {
+    font-size: .8rem;
+}
+/* End of mobile app section */
+
+/* Career section */
+.courier-row {
+    background-color: rgba(105, 179, 254, 0.095);
+}
+
+.chef-row {
+    background-color: rgba(254, 165, 105, 0.09);
+}
+
+.career-btn {
+    background-color: #fe696a;
+}
+
+.career-btn:hover {
+    background-color: #fe3638;
+}
+/* End of Career section */
+
+/* Reviews section */
+.reviews-container {
+    background-color: #f6f9fc;
+}
+
+.carousel-indicators {
+    bottom: -3rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color:#6c757d ;
+}
+
+.slider-btn.active {
+    background-color: #fe3638;
+}
+/* End of reviews section */
+
+/* Footer */
+.footer-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+/* End of footer */
+
+/* Responsive */
+
+@media only screen and (max-width: 576px) {
+    .btn-mobile-app {
+        min-width: 60%;
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    .btn-mobile-app-footer {
+        min-width: 30%;
+        max-width: 35%;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .hero-container {
+        padding-top: 6rem !important;
+    }
+}
+
+
+
+
